@@ -7,4 +7,6 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class TypeOfTargetService {
 
+	
+	/// j'ai fait un commit   
 }
