@@ -23,10 +23,10 @@ import javax.persistence.Table;
 
 @Table(name="service")
 @Entity
-public class Service {
+public class Skill {
 	
 	
-	public Service() {
+	public Skill() {
 		serviceOfCleaner = new HashSet<ServiceOfCleaner>();
 	}
 	
