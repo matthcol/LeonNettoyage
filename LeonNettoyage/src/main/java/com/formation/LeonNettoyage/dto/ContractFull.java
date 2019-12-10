@@ -23,7 +23,7 @@ public class ContractFull {
 	private TypeOfTarget typeoftarget;
 	
 	@Column
-	private Skill service;
+	private Skill skill;
 	
 	@Column 
 	private Cleaner cleaner;
@@ -32,13 +32,13 @@ public class ContractFull {
 	private Attempt attempt;
 	
 	
-	public ContractFull(Long id, Long price, Target target, TypeOfTarget typeoftarget, Skill service, Cleaner cleaner, Attempt attempt) {
+	public ContractFull(Long id, Long price, Target target, TypeOfTarget typeoftarget, Skill skill, Cleaner cleaner, Attempt attempt) {
 		super();
 		this.id = id;
 		this.price = price;
 		this.target = target;
 		this.typeoftarget = typeoftarget;
-		this.service = service;
+		this.skill = skill;
 		this.cleaner = cleaner;
 		this.attempt = attempt;
 	}
