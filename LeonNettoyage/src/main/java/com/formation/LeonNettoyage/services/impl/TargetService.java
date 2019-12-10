@@ -7,11 +7,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.formation.LeonNettoyage.persistence.entities.Target;
 import com.formation.LeonNettoyage.persistence.repositories.ITargetRepository;
+import com.formation.LeonNettoyage.services.ITargetService;
 import com.formation.LeonNettoyage.services.common.AbstractService;
 
 @Service
 @Transactional
-public class TargetService extends AbstractService<Target> {
+public class TargetService extends AbstractService<Target> implements ITargetService{
 	@Autowired
 	private ITargetRepository repo;
 	
