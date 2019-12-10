@@ -59,7 +59,7 @@ public class ClientController {
 		return service.findOne(id);		
 	}
 	
-	@DeleteMapping(path="/{identifiant}") 
+	@DeleteMapping(path="/{identifier}") 
 	public Boolean deleteOne (@PathVariable Long id) {
 		return service.deleteById(id);
 	}
