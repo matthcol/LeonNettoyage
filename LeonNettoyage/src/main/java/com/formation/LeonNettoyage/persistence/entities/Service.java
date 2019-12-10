@@ -1,6 +1,11 @@
 package com.formation.LeonNettoyage.persistence.entities;
 
-import java.util.List;
+
+
+
+
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,9 +17,20 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+
+
+
+
 @Table(name="service")
 @Entity
 public class Service {
+	
+	
+	public Service() {
+		serviceOfCleaner = new HashSet<ServiceOfCleaner>();
+	}
+	
+	
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //Colonne générée
@@ -26,7 +42,7 @@ public class Service {
 	
 	@OneToMany(fetch=FetchType.EAGER)
 	@JoinColumn(name = "id_service_of_cleaner", referencedColumnName = "id")
-	private List<ServiceOfCleaner> serviceOfCleaner;
+	private Set<ServiceOfCleaner> serviceOfCleaner;
 	
 	public Long getId() {
 		return id;

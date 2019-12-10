@@ -1,5 +1,6 @@
 package com.formation.LeonNettoyage.persistence.entities;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -16,6 +17,12 @@ import javax.persistence.Table;
 @Entity
 public class TypeOfTarget {
 	
+	public TypeOfTarget() {
+		
+		targets = new HashSet<Target>();
+	}
+	
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //Colonne générée
 	private Long id;
@@ -26,7 +33,7 @@ public class TypeOfTarget {
 	
 	@OneToMany(fetch=FetchType.EAGER)
 	@JoinColumn(name = "id_type_of_target", referencedColumnName = "id")
-	private Set<Target> Targets;
+	private Set<Target> targets;
 	
 	public Long getId() {
 		return id;
