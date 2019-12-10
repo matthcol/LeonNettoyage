@@ -39,6 +39,9 @@ public class Contract {
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name = "id_type_of_target", referencedColumnName = "id")
 	private TypeOfTarget typeOfTarget;
+	
+	
+	
 	public Long getId() {
 		return id;
 	}
