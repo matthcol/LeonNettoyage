@@ -1,5 +1,8 @@
 package com.formation.LeonNettoyage.services;
 
-public interface IServiceService {
+import com.formation.LeonNettoyage.persistence.entities.Service;
+import com.formation.LeonNettoyage.services.common.IServiceActions;
+
+public interface IServiceService extends IServiceActions<Service>{
 
 }
