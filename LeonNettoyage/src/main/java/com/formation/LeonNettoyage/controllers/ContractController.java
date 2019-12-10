@@ -53,6 +53,7 @@ import com.formation.LeonNettoyage.services.common.IServiceActions;
 				.collect(Collectors.toList());
 	}
 	
+	
 	@RequestMapping(path = "/contract/full", method = RequestMethod.GET) 
 	public List<ContractFull> findAllFull() {
 		
