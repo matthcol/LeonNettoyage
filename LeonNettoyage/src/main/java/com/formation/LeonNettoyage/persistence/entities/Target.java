@@ -4,9 +4,12 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Table(name="target")
@@ -27,6 +30,16 @@ public class Target {
 	@Column
 	private String otherInfo;
 	
+	@ManyToOne(fetch=FetchType.EAGER)
+	@JoinColumn(name = "id_type_of_target", referencedColumnName = "id")
+	private TypeOfTarget typeOfTarget;
+	
+	public TypeOfTarget getTypeOfTarget() {
+		return typeOfTarget;
+	}
+	public void setTypeOfTarget(TypeOfTarget typeOfTarget) {
+		this.typeOfTarget = typeOfTarget;
+	}
 	public Long getId() {
 		return id;
 	}

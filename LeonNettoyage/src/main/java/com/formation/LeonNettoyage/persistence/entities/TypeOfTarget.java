@@ -1,26 +1,16 @@
 package com.formation.LeonNettoyage.persistence.entities;
 
-import java.util.HashSet;
-import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Table(name="typeOfTarget")
 @Entity
 public class TypeOfTarget {
-	
-	public TypeOfTarget() {
-		
-		targets = new HashSet<Target>();
-	}
 	
 	
 	@Id
@@ -30,10 +20,6 @@ public class TypeOfTarget {
 	private String label;
 	@Column 
 	private Long price;
-	
-	@OneToMany(fetch=FetchType.EAGER)
-	@JoinColumn(name = "id_type_of_target", referencedColumnName = "id")
-	private Set<Target> targets;
 	
 	public Long getId() {
 		return id;

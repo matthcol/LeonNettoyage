@@ -37,8 +37,8 @@ public class Contract {
 	@JoinColumn(name = "id_attempt", referencedColumnName = "id")
 	private List<Attempt> attempts;
 	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name = "id_type_of_target", referencedColumnName = "id")
-	private TypeOfTarget typeOfTarget;
+	@JoinColumn(name = "id_target", referencedColumnName = "id")
+	private Target target;
 	
 	
 	
@@ -78,13 +78,12 @@ public class Contract {
 	public void setAttempts(List<Attempt> attempts) {
 		this.attempts = attempts;
 	}
-	public TypeOfTarget getTypeOfTarget() {
-		return typeOfTarget;
+	public Target getTarget() {
+		return target;
 	}
-	public void setTypeOfTarget(TypeOfTarget typeOfTarget) {
-		this.typeOfTarget = typeOfTarget;
+	public void setTarget(Target target) {
+		this.target = target;
 	}
-	
 
 	
 }
