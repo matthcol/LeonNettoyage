@@ -12,32 +12,33 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.formation.LeonNettoyage.persistence.entities.Contract;
 import com.formation.LeonNettoyage.persistence.repositories.IContractRepository;
+import com.formation.LeonNettoyage.services.IContractService;
 import com.formation.LeonNettoyage.services.common.AbstractService;
 
-import exceptions.ClientNotFoundException;
+import exceptions.ContractNotFoundException;
 
 @Service
 @Transactional
 public class ContractService<T> extends AbstractService<Contract> implements IContractService{
 	
- @Autowired
- private IContractRepository tutu;
+	@Autowired
+	private IContractRepository tutu;
 
 	@Override
 	public JpaRepository<Contract, Long> getRepo() {
 		
 		return tutu;
 	}
-	@Transactional
+	
 	@Override
-	public List<T> findAll() {
+	public List<Contract> findAll() {
 		return getRepo().findAll();
 	}
 
 	@Transactional(readOnly=true)
 	@Override
-	public T findOne(Long id) {
-		Optional<T>opt = getRepo().findById(id);
+	public Contract findOne(Long id) {
+		Optional<Contract>opt = getRepo().findById(id);
 		if (opt.isEmpty()) {
 			throw new ContractNotFoundException("");
 		}
@@ -50,12 +51,14 @@ public class ContractService<T> extends AbstractService<Contract> implements ICo
 	}
 
 	@Override
-	public boolean delete(T t) {
+	public boolean delete(Contract contract) {
 		return false;
 	}
 	
 	@PostMapping
 	@Override
-	public T save(@RequestBody T t) {
-		return getRepo().save(t);
+	public Contract save(@RequestBody Contract contract) {
+		return getRepo().save(contract);
 	}
+	
+}
