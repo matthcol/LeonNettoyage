@@ -25,6 +25,11 @@ public class Client {
 	private String phone;
 	@Column 
 	private Date dateOfBirth;
+	@Column
+	private String login;
+	@Column
+	private String password;
+	
 	public Long getId() {
 		return id;
 	}
@@ -60,6 +65,18 @@ public class Client {
 	}
 	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
+	}
+	public String getLogin() {
+		return login;
+	}
+	public void setLogin(String login) {
+		this.login = login;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 }
