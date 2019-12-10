@@ -1,12 +1,9 @@
 package com.formation.LeonNettoyage.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-
 public class SkillLight {
-	@Id
+
 	private Long id;
-	@Column
+
 	private String skillName;
 	public SkillLight(Long id, String skillName) {
 		super();

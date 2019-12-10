@@ -1,19 +1,16 @@
 package com.formation.LeonNettoyage.dto;
 
-import javax.persistence.Column;
 
 import com.formation.LeonNettoyage.persistence.entities.Cleaner;
 import com.formation.LeonNettoyage.persistence.entities.Client;
 
 public class ContractLog {
 
-	@Column
+
 	private Long id;
 	
-	@Column
 	private Client client;
 	
-	@Column
 	private Cleaner cleaner;
 	
 	public ContractLog(Long id, Client client, Cleaner cleaner) {

@@ -1,22 +1,16 @@
 package com.formation.LeonNettoyage.dto;
 
-import javax.persistence.Column;
-
 import com.formation.LeonNettoyage.persistence.entities.Target;
 import com.formation.LeonNettoyage.persistence.entities.TypeOfTarget;
 
 public class ContractLight {
 	
-	@Column
 	private Long id;
 	
-	@Column
 	private Long price;
 	
-	@Column
 	private Target target;
-	
-	@Column
+
 	private TypeOfTarget typeoftarget;
 	
 	

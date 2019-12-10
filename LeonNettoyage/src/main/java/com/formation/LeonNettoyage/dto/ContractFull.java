@@ -1,7 +1,5 @@
 package com.formation.LeonNettoyage.dto;
 
-import javax.persistence.Column;
-
 import com.formation.LeonNettoyage.persistence.entities.Attempt;
 import com.formation.LeonNettoyage.persistence.entities.Cleaner;
 import com.formation.LeonNettoyage.persistence.entities.Skill;
@@ -10,25 +8,18 @@ import com.formation.LeonNettoyage.persistence.entities.TypeOfTarget;
 
 public class ContractFull {
 	
-	@Column
 	private Long id;
 	
-	@Column
 	private Long price;
 	
-	@Column
 	private Target target;
 	
-	@Column
 	private TypeOfTarget typeoftarget;
-	
-	@Column
+
 	private Skill skill;
 	
-	@Column 
 	private Cleaner cleaner;
 	
-	@Column
 	private Attempt attempt;
 	
 	
