@@ -29,7 +29,7 @@ public class Contract {
 	private Client client;
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name = "id_service", referencedColumnName = "id")
-	private Service service;
+	private Skill service;
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name = "id_cleaner", referencedColumnName = "id")
 	private Cleaner cleaner;
@@ -60,10 +60,10 @@ public class Contract {
 	public void setClient(Client client) {
 		this.client = client;
 	}
-	public Service getService() {
+	public Skill getService() {
 		return service;
 	}
-	public void setService(Service service) {
+	public void setService(Skill service) {
 		this.service = service;
 	}
 	public Cleaner getCleaner() {

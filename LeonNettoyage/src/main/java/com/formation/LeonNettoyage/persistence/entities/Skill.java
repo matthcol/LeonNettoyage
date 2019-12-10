@@ -27,7 +27,7 @@ public class Skill {
 	
 	
 	public Skill() {
-		serviceOfCleaner = new HashSet<ServiceOfCleaner>();
+		serviceOfCleaner = new HashSet<SkillOfCleaner>();
 	}
 	
 	
@@ -42,7 +42,7 @@ public class Skill {
 	
 	@OneToMany(fetch=FetchType.EAGER)
 	@JoinColumn(name = "id_service_of_cleaner", referencedColumnName = "id")
-	private Set<ServiceOfCleaner> serviceOfCleaner;
+	private Set<SkillOfCleaner> serviceOfCleaner;
 	
 	public Long getId() {
 		return id;

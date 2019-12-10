@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 @Table(name="serviceOfCleaner")
 @Entity
-public class ServiceOfCleaner {
+public class SkillOfCleaner {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //Colonne générée

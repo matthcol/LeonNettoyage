@@ -1,5 +1,7 @@
 package com.formation.LeonNettoyage.persistence.repositories;
 
-public interface IServiceOfCleanerRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ISkillOfCleanerRepository extends JpaRepository{
 
 }

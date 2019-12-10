@@ -2,8 +2,8 @@ package com.formation.LeonNettoyage.persistence.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.formation.LeonNettoyage.persistence.entities.Service;
+import com.formation.LeonNettoyage.persistence.entities.Skill;
 
-public interface IServiceRepository extends JpaRepository<Service,Long>  {
+public interface ISkillRepository extends JpaRepository<Skill,Long>  {
 
 }

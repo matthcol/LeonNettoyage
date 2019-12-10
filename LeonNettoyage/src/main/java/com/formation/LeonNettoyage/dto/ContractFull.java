@@ -4,7 +4,7 @@ import javax.persistence.Column;
 
 import com.formation.LeonNettoyage.persistence.entities.Attempt;
 import com.formation.LeonNettoyage.persistence.entities.Cleaner;
-import com.formation.LeonNettoyage.persistence.entities.Service;
+import com.formation.LeonNettoyage.persistence.entities.Skill;
 import com.formation.LeonNettoyage.persistence.entities.Target;
 import com.formation.LeonNettoyage.persistence.entities.TypeOfTarget;
 
@@ -23,7 +23,7 @@ public class ContractFull {
 	private TypeOfTarget typeoftarget;
 	
 	@Column
-	private Service service;
+	private Skill service;
 	
 	@Column 
 	private Cleaner cleaner;
@@ -32,7 +32,7 @@ public class ContractFull {
 	private Attempt attempt;
 	
 	
-	public ContractFull(Long id, Long price, Target target, TypeOfTarget typeoftarget, Service service, Cleaner cleaner, Attempt attempt) {
+	public ContractFull(Long id, Long price, Target target, TypeOfTarget typeoftarget, Skill service, Cleaner cleaner, Attempt attempt) {
 		super();
 		this.id = id;
 		this.price = price;
