@@ -7,11 +7,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.formation.LeonNettoyage.persistence.entities.Cleaner;
 import com.formation.LeonNettoyage.persistence.repositories.ICleanerRepository;
+import com.formation.LeonNettoyage.services.ICleanerService;
 import com.formation.LeonNettoyage.services.common.AbstractService;
 
 @Service
 @Transactional
-public class CleanerService extends AbstractService<Cleaner>{
+public class CleanerService extends AbstractService<Cleaner> implements ICleanerService{
 	
 	@Autowired
 	private ICleanerRepository repo;
