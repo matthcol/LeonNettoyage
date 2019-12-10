@@ -66,4 +66,29 @@ public class ContractFull {
 		this.price = price;
 	}
 
+	public Skill getSkill() {
+		return skill;
+	}
+
+	public void setSkill(Skill skill) {
+		this.skill = skill;
+	}
+
+	public Cleaner getCleaner() {
+		return cleaner;
+	}
+
+	public void setCleaner(Cleaner cleaner) {
+		this.cleaner = cleaner;
+	}
+
+	public Attempt getAttempt() {
+		return attempt;
+	}
+
+	public void setAttempt(Attempt attempt) {
+		this.attempt = attempt;
+	}
+
+	
 }
