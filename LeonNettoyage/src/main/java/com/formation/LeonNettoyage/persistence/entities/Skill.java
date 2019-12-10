@@ -21,13 +21,13 @@ import javax.persistence.Table;
 
 
 
-@Table(name="service")
+@Table(name="skill")
 @Entity
 public class Skill {
 	
 	
 	public Skill() {
-		serviceOfCleaner = new HashSet<SkillOfCleaner>();
+		skillOfCleaner = new HashSet<SkillOfCleaner>();
 	}
 	
 	
@@ -36,31 +36,46 @@ public class Skill {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //Colonne générée
 	private Long id;
 	@Column
-	private String serviceName;
+	private String skillName;
 	@Column
 	private Long price;
 	
 	@OneToMany(fetch=FetchType.EAGER)
-	@JoinColumn(name = "id_service_of_cleaner", referencedColumnName = "id")
-	private Set<SkillOfCleaner> serviceOfCleaner;
-	
+	@JoinColumn(name = "id_skill_of_cleaner", referencedColumnName = "id")
+	private Set<SkillOfCleaner> skillOfCleaner;
+
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getServiceName() {
-		return serviceName;
+
+	public String getSkillName() {
+		return skillName;
 	}
-	public void setServiceName(String serviceName) {
-		this.serviceName = serviceName;
+
+	public void setSkillName(String skillName) {
+		this.skillName = skillName;
 	}
+
 	public Long getPrice() {
 		return price;
 	}
+
 	public void setPrice(Long price) {
 		this.price = price;
 	}
+
+	public Set<SkillOfCleaner> getSkillOfCleaner() {
+		return skillOfCleaner;
+	}
+
+	public void setSkillOfCleaner(Set<SkillOfCleaner> skillOfCleaner) {
+		this.skillOfCleaner = skillOfCleaner;
+	}
+	
+	
 	
 }
