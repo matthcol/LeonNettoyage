@@ -26,7 +26,7 @@ public class CleanerController {
 	public CleanerController() {
 		mapper = new ModelMapper();
 	}
-}
+
 	
 	@RequestMapping(path = "/listLight", method = RequestMethod.GET) 
 	public List<CleanerLight> findAllLight() {
