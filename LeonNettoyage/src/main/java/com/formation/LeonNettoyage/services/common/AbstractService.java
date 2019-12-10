@@ -17,7 +17,6 @@ public abstract class AbstractService<T> implements IServiceActions<T> {
 	@Autowired
 	public abstract JpaRepository<T, Long> getRepo();
 	
-	@Transactional
 	@Override
 	public List<T> findAll() {
 		return getRepo().findAll();
