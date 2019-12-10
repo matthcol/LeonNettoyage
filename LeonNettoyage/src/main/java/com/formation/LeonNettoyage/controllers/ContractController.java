@@ -87,5 +87,4 @@ import com.formation.LeonNettoyage.services.common.IServiceActions;
 	public Contract save (@RequestBody Contract contract) {
 		return toto.save(contract);
 	}
-
 }
