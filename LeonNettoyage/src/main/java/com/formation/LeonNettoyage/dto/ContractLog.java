@@ -20,6 +20,9 @@ public class ContractLog {
 		this.cleaner = cleaner;
 	}
 
+	public ContractLog() {
+	}
+	
 	public Long getId() {
 		return id;
 	}

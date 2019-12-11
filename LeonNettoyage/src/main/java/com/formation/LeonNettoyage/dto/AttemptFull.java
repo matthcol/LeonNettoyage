@@ -13,6 +13,8 @@ public class AttemptFull {
 		
 	}
 	
+	public AttemptFull() {
+	}
 	
 	private Long id;
 

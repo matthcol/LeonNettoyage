@@ -17,6 +17,10 @@ public class CleanerLight {
 		this.pseudo = pseudo;
 	}
 
+	public CleanerLight() {
+		
+	}
+	
 	public Long getId() {
 		return id;
 	}

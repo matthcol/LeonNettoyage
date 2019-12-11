@@ -22,6 +22,9 @@ public class ContractLight {
 		this.typeoftarget = typeoftarget;
 	}
 
+	public ContractLight() {
+	}
+	
 	public Target getTarget() {
 		return target;
 	}
