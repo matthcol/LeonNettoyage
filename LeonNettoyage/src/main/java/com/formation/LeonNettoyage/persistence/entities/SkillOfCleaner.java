@@ -1,6 +1,5 @@
 package com.formation.LeonNettoyage.persistence.entities;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -17,12 +16,10 @@ public class SkillOfCleaner {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //Colonne générée
 	private Long id;
-	@Column
-	private Long idSkill;
 	
 	
 	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name = "id_cleaner", referencedColumnName = "id")
+	@JoinColumn(name = "id_cleaner")
 	private Cleaner cleaner;
 
 
@@ -35,15 +32,6 @@ public class SkillOfCleaner {
 		this.id = id;
 	}
 
-
-	public Long getIdService() {
-		return idSkill;
-	}
-
-
-	public void setIdService(Long idService) {
-		this.idSkill = idService;
-	}
 
 
 	public Cleaner getCleaner() {
