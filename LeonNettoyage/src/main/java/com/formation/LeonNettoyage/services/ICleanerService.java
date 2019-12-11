@@ -5,7 +5,7 @@ import com.formation.LeonNettoyage.services.common.IServiceActions;
 
 public interface ICleanerService extends IServiceActions<Cleaner> {
 
-	
+	Cleaner findByName(String username);
 	
 	
 }
