@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.formation.LeonNettoyage.persistence.entities.Cleaner;
+import com.formation.LeonNettoyage.persistence.entities.Client;
 import com.formation.LeonNettoyage.persistence.repositories.ICleanerRepository;
 import com.formation.LeonNettoyage.services.ICleanerService;
 import com.formation.LeonNettoyage.services.common.AbstractService;
@@ -20,5 +21,8 @@ public class CleanerService extends AbstractService<Cleaner> implements ICleaner
 	public JpaRepository<Cleaner, Long> getRepo() {
 		return repo;
 	}
-
+	@Override
+	public Cleaner findByName(String username) {
+		return repo.findByName(username);
+	}
 }
