@@ -15,9 +15,11 @@ public class Cleaner {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //Colonne générée
 	private Long id;
 	@Column
-	private Long pseudo;
+	private String pseudo;
 	@Column
 	private Long price;
+	@Column
+	private String password;
 	
 	public Long getId() {
 		return id;
@@ -25,10 +27,10 @@ public class Cleaner {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Long getPseudo() {
+	public String getPseudo() {
 		return pseudo;
 	}
-	public void setPseudo(Long pseudo) {
+	public void setPseudo(String pseudo) {
 		this.pseudo = pseudo;
 	}
 	public Long getPrice() {
