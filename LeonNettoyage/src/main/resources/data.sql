@@ -49,7 +49,3 @@ INSERT INTO status (id, label) VALUES (1, 'Demande enregistrée');
 INSERT INTO status (id, label) VALUES (2, 'Cible repérée');
 INSERT INTO status (id, label) VALUES (3, 'Tentative échouée');
 INSERT INTO status (id, label) VALUES (4, 'Cible nettoyée');
-
-
-
-CONTRACT
