@@ -5,11 +5,16 @@ public class SkillLight {
 	private Long id;
 
 	private String skillName;
+	
 	public SkillLight(Long id, String skillName) {
 		super();
 		this.id = id;
 		this.skillName = skillName;
 	}
+	
+	public SkillLight() {
+	}
+	
 	public Long getId() {
 		return id;
 	}

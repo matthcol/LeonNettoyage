@@ -12,6 +12,9 @@ public class TargetLight {
 		this.name = name;
 	}
 
+	public TargetLight() {
+	}
+	
 	public Long getId() {
 		return id;
 	}

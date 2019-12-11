@@ -12,13 +12,13 @@ INSERT INTO client (id, name, first_name, email, phone, date_of_birth, password)
 INSERT INTO client (id, name, first_name, email, phone, date_of_birth, password) VALUES (3, 'Marin', 'Lucas', 'bogossdu31@gmail.com', '0663236541', '1987-08-21', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
 INSERT INTO client (id, name, first_name, email, phone, date_of_birth, password) VALUES (4, 'Durand', 'Nathan', 'cherchescooter@gmail.com', '0636214596', '1982-09-11', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
 INSERT INTO client (id, name, first_name, email, phone, date_of_birth, password) VALUES (5, 'Delsol', 'Jérémy', 'jmlaraclette@gmail.com', '0623415685', '1983-05-10', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
-INSERT INTO cleaner (id, pseudo, price, password) VALUES (1, 'CharlesManson', '7500', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
-INSERT INTO cleaner (id, pseudo, price, password) VALUES (2, 'TedBundy', '6000', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
-INSERT INTO cleaner (id, pseudo, price, password) VALUES (3, 'FreddyKrueger', '4500', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
-INSERT INTO cleaner (id, pseudo, price, password) VALUES (4, 'Terminator', '1000', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
-INSERT INTO skill (id, skill_name, price) VALUES (1, "Strangulation", "10000");
-INSERT INTO skill (id, skill_name, price) VALUES (2, "Arme blanche", "7500");
-INSERT INTO skill (id, skill_name, price) VALUES (3, "Arme à feu", "1000");
+INSERT INTO cleaner (id, pseudo, price, password) VALUES (1, 'CharlesManson', '2000', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
+INSERT INTO cleaner (id, pseudo, price, password) VALUES (2, 'TedBundy', '2500', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
+INSERT INTO cleaner (id, pseudo, price, password) VALUES (3, 'FreddyKrueger', '3000', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
+INSERT INTO cleaner (id, pseudo, price, password) VALUES (4, 'Terminator', '5000', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
+INSERT INTO skill (id, skill_name, price) VALUES (1, "Strangulation", "500");
+INSERT INTO skill (id, skill_name, price) VALUES (2, "Arme blanche", "400");
+INSERT INTO skill (id, skill_name, price) VALUES (3, "Arme à feu", "300");
 INSERT INTO skill_of_cleaner (id, id_skill, id_cleaner) VALUES (1, 1, 1);
 INSERT INTO skill_of_cleaner (id, id_skill, id_cleaner) VALUES (2, 2, 1);
 INSERT INTO skill_of_cleaner (id, id_skill, id_cleaner) VALUES (3, 3, 1);
@@ -26,6 +26,8 @@ INSERT INTO skill_of_cleaner (id, id_skill, id_cleaner) VALUES (4, 1, 2);
 INSERT INTO skill_of_cleaner (id, id_skill, id_cleaner) VALUES (5, 2, 2);
 INSERT INTO skill_of_cleaner (id, id_skill, id_cleaner) VALUES (6, 3, 4);
 INSERT INTO skill_of_cleaner (id, id_skill, id_cleaner) VALUES (7, 2, 3);
+<<<<<<< HEAD
+=======
 INSERT INTO type_of_target (id, label, price) VALUES (1, 'Très connu', '50000');
 INSERT INTO type_of_target (id, label, price) VALUES (2, 'Connu', '20000');
 INSERT INTO type_of_target (id, label, price) VALUES (3, 'Peu connu', '5000');
@@ -49,3 +51,11 @@ INSERT INTO status (id, label) VALUES (1, 'Demande enregistrée');
 INSERT INTO status (id, label) VALUES (2, 'Cible repérée');
 INSERT INTO status (id, label) VALUES (3, 'Tentative échouée');
 INSERT INTO status (id, label) VALUES (4, 'Cible nettoyée');
+<<<<<<< HEAD
+=======
+
+
+
+CONTRACT
+>>>>>>> branch 'master' of https://github.com/WildDrosophila/LeonNettoyage.git
+>>>>>>> branch 'master' of https://github.com/WildDrosophila/LeonNettoyage.git

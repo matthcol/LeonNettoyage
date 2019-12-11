@@ -22,6 +22,11 @@ public class TargetFull {
 		this.otherInfo = otherInfo;
 	}
 
+	public TargetFull() {
+	}
+	
+	
+	
 	public Long getId() {
 		return id;
 	}

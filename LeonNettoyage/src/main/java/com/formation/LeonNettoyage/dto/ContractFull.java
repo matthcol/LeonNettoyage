@@ -34,6 +34,9 @@ public class ContractFull {
 		this.attempt = attempt;
 	}
 
+	public ContractFull() {
+	}
+	
 	public Target getTarget() {
 		return target;
 	}
