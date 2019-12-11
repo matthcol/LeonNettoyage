@@ -10,7 +10,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-@Table(name="serviceOfCleaner")
+@Table(name="skillOfCleaner")
 @Entity
 public class SkillOfCleaner {
 	
