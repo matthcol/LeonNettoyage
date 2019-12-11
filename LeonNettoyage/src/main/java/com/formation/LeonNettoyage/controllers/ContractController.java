@@ -18,6 +18,7 @@ import com.formation.LeonNettoyage.dto.ContractFull;
 import com.formation.LeonNettoyage.dto.ContractLight;
 import com.formation.LeonNettoyage.dto.ContractLog;
 import com.formation.LeonNettoyage.persistence.entities.Contract;
+import com.formation.LeonNettoyage.services.IContractService;
 import com.formation.LeonNettoyage.services.common.IServiceActions;
 
 @RestController
@@ -34,7 +35,7 @@ import com.formation.LeonNettoyage.services.common.IServiceActions;
 	private ModelMapper mapperLog;
 	
 	@Autowired 
-	IServiceActions<Contract> toto;
+	IContractService toto;
 	
 	public ContractController() {
 		mapperLight = new ModelMapper();
