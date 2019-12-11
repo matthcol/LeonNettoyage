@@ -17,6 +17,11 @@ public class SkillFull {
 		this.skillName = skillName;
 		this.price = price;
 	}
+	
+	public SkillFull() {
+	}
+	
+	
 	public Long getId() {
 		return id;
 	}

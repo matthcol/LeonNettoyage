@@ -4,13 +4,14 @@ import com.formation.LeonNettoyage.persistence.entities.Status;
 
 public class AttemptLight {
 
-
-
 	public AttemptLight(Long id, Status status) {
 		super();
 		this.id = id;
 		this.status = status;
-		
+	}
+	
+	
+	public AttemptLight() {
 	}
 	
 	
@@ -18,6 +19,8 @@ public class AttemptLight {
 	
 	private Status status;
 
+	
+	
 	public Long getId() {
 		return id;
 	}

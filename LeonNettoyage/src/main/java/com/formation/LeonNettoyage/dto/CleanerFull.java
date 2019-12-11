@@ -8,25 +8,30 @@ public class CleanerFull {
 	@Id
 	private Long id;
 	@Column
-	private Long pseudo;
+	private String pseudo;
 	@Column
 	private Long price;
-	public CleanerFull(Long id, Long pseudo, Long price) {
+	public CleanerFull(Long id, String pseudo, Long price) {
 		super();
 		this.id = id;
 		this.pseudo = pseudo;
 		this.price = price;
 	}
+	
+	public CleanerFull() {
+	}
+	
+	
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Long getPseudo() {
+	public String getPseudo() {
 		return pseudo;
 	}
-	public void setPseudo(Long pseudo) {
+	public void setPseudo(String pseudo) {
 		this.pseudo = pseudo;
 	}
 	public Long getPrice() {
