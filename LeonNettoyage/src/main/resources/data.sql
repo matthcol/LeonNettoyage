@@ -33,17 +33,23 @@ INSERT INTO target (id, adress, date_of_birth, 	first_name, name, other_info, id
 INSERT INTO target (id, adress, date_of_birth, 	first_name, name, other_info, id_type_of_target) VALUES (5, 'rue de la Sole', '1984-08-09', 'Adélie', 'Thirion', 'A des contacts dans le bâtiments.. méfiance', '1');
 INSERT INTO target (id, adress, date_of_birth, 	first_name, name, other_info, id_type_of_target) VALUES (6, 'rue de la Raie, '1992-04-30', 'Alice', 'Rousseau', 'C'est un roc ! … c'est un pic ! … c'est un cap !', '3');
 INSERT INTO target (id, adress, date_of_birth, 	first_name, name, other_info, id_type_of_target) VALUES (7, 'rue du Maquereau', '1999-10-17', 'Baptiste', 'Aurelien', 'Aime s'entourer de jeunes demoiselles afin de se nourrir de leur sang (oui, c'est un vampire, prévoir pieux et ail)', '2');
-INSERT INTO target (id, adress, date_of_birth, 	first_name, name, other_info, id_type_of_target) VALUES (6, 'rue de l'Espadon', '1995-02-02', 'Emmy', 'Ventou', 'La tête dans les étoiles', '1');
-INSERT INTO target (id, adress, date_of_birth, 	first_name, name, other_info, id_type_of_target) VALUES (6, 'rue du Gobbie', '1966-12-05', 'Margot', 'Cantaloube', 'Aime les légumes', '4');
+INSERT INTO target (id, adress, date_of_birth, 	first_name, name, other_info, id_type_of_target) VALUES (8, 'rue de l'Espadon', '1995-02-02', 'Emmy', 'Ventou', 'La tête dans les étoiles', '1');
+INSERT INTO target (id, adress, date_of_birth, 	first_name, name, other_info, id_type_of_target) VALUES (9, 'rue du Gobbie', '1966-12-05', 'Margot', 'Cantaloube', 'Aime les légumes', '4');
 INSERT INTO type_of_target (id, label, price) VALUES (1, 'Très connu', '50000');
 INSERT INTO type_of_target (id, label, price) VALUES (2, 'Connu', '20000');
 INSERT INTO type_of_target (id, label, price) VALUES (3, 'Peu connu', '5000');
 INSERT INTO type_of_target (id, label, price) VALUES (4, 'Inconnu', '1000');
-INSERT INTO 
+INSERT INTO attempt (id, status_id) VALUES (1, '1');
+INSERT INTO attempt (id, status_id) VALUES (2, '2');
+INSERT INTO attempt (id, status_id) VALUES (3, '1');
+INSERT INTO attempt (id, status_id) VALUES (4, '3');
+INSERT INTO attempt (id, status_id) VALUES (5, '2');
+INSERT INTO attempt (id, status_id) VALUES (6, '1');
+INSERT INTO status (id, label) VALUES (1, 'Demande enregistrée');
+INSERT INTO status (id, label) VALUES (2, 'Cible repérée');
+INSERT INTO status (id, label) VALUES (3, 'Tentative échouée');
+INSERT INTO status (id, label) VALUES (4, 'Cible nettoyée');
 
-ATTEMPT
-
-STATUS
 
 
 CONTRACT
