@@ -29,7 +29,7 @@ public class ClientController {
 	private ModelMapper mapperFull; // dto
 	
 	@Autowired
-	IServiceActions<Client> service;//*IClientService service;
+	IServiceActions<Client> service; //*IClientService service;
 	
 	public ClientController() {
 		mapperLight = new ModelMapper();

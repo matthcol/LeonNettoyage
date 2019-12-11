@@ -11,8 +11,6 @@ public class CleanerLight {
 	@Column
 	private String pseudo;
 	
-	
-
 	public CleanerLight(Long id, String pseudo) {
 		super();
 		this.id = id;
