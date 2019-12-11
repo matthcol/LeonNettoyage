@@ -27,7 +27,7 @@ public abstract class AbstractService<T> implements IServiceActions<T> {
 	public T findOne(Long id) {
 		Optional<T>opt = getRepo().findById(id);
 		if (opt.isEmpty()) {
-			throw new ClientNotFoundException("");
+			throw new ClientNotFoundException("Pas de résultat");
 		}
 		return opt.get();
 	}

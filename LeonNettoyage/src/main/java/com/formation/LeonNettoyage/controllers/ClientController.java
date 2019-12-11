@@ -31,6 +31,7 @@ public class ClientController {
 	@Autowired
 	IClientService service;//*IClientService service;
 	
+	
 	public ClientController() {
 		mapperLight = new ModelMapper();
 		mapperFull = new ModelMapper();
