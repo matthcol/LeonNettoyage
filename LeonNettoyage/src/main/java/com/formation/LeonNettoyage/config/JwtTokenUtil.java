@@ -24,7 +24,11 @@ public class JwtTokenUtil {
 	private String secret;
 	
 	public String getUsernameFromToken(String token) {
-		return getClaimFromToken(token, Claims::getSubject);
+		try {
+			return getClaimFromToken(token, Claims::getSubject);
+		} catch (Exception e) {
+			throw new NotAuthorizedException("test");
+		}
 	}
 	
 	public Date getExpirationDateFromToken(String token) {
