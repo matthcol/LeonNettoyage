@@ -15,4 +15,3 @@ INSERT INTO client (id, name, firstName, email, phone, dateOfBirth, password) VA
 INSERT INTO cleaner (id, pseudo, price, password) VALUES (1, 'CharlesManson', '2000', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
 INSERT INTO cleaner (id, pseudo, price, password) VALUES (2, 'TedBundy', '2500', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
 INSERT INTO cleaner (id, pseudo, price, password) VALUES (1, 'FreddyKrueger', '3000', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
-INSERT INTO 
