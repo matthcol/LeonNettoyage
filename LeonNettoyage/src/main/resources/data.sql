@@ -1,0 +1,10 @@
+DELETE FROM Attempt; 
+DELETE FROM Cleaner;
+DELETE FROM Client;
+DELETE FROM Contract;
+DELETE FROM Skill;
+DELETE FROM SkillOfCleaner;
+DELETE FROM Status;
+DELETE FROM Target;
+DELETE FROM TypeOfTarget;
+INSERT INTO Client (id, name, firstName, email, phone, dateOfBirth, password) VALUES (1, 'Richier', ');
