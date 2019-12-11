@@ -10,7 +10,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-@Table(name="skillOfCleaner")
+@Table(name="skill_of_cleaner")
 @Entity
 public class SkillOfCleaner {
 	
@@ -18,7 +18,7 @@ public class SkillOfCleaner {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //Colonne générée
 	private Long id;
 	@Column
-	private Long idService;
+	private Long idSkill;
 	
 	
 	@ManyToOne(fetch=FetchType.LAZY)
@@ -37,12 +37,12 @@ public class SkillOfCleaner {
 
 
 	public Long getIdService() {
-		return idService;
+		return idSkill;
 	}
 
 
 	public void setIdService(Long idService) {
-		this.idService = idService;
+		this.idSkill = idService;
 	}
 
 

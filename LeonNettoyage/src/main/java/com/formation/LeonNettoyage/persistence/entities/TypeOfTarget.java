@@ -8,7 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(name="typeOfTarget")
+@Table(name="type_of_target")
 @Entity
 public class TypeOfTarget {
 	
