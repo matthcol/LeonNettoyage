@@ -18,8 +18,6 @@ public class Attempt {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //Colonne générée
 	private Long id;
 
-	@Column
-	private Long idContract;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn
@@ -33,13 +31,6 @@ public class Attempt {
 		this.id = id;
 	}
 
-	public Long getIdContract() {
-		return idContract;
-	}
-
-	public void setIdContract(Long idContract) {
-		this.idContract = idContract;
-	}
 
 	public Status getStatus() {
 		return status;
