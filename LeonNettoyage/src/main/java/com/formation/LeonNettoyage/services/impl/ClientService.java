@@ -24,8 +24,8 @@ public class ClientService extends AbstractService<Client> implements IClientSer
 
 	@Override
 	public Client findByMail(String username) {
-		// TODO Auto-generated method stub
-		return null;
+
+		return repo.findByMail(username);
 	}
 
 }

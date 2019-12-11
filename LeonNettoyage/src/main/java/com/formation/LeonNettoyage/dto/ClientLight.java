@@ -15,6 +15,9 @@ public class ClientLight {
 		this.name = name;
 	}
 
+	public ClientLight() {
+	}
+	
 	public Long getId() {
 		return id;
 	}
