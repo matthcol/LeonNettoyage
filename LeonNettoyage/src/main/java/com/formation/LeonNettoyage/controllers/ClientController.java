@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.formation.LeonNettoyage.dto.ClientFull;
 import com.formation.LeonNettoyage.dto.ClientLight;
 import com.formation.LeonNettoyage.persistence.entities.Client;
-import com.formation.LeonNettoyage.services.common.IServiceActions;
+import com.formation.LeonNettoyage.services.IClientService;
 
 @RestController
 @RequestMapping(path = "/client")
@@ -29,7 +29,7 @@ public class ClientController {
 	private ModelMapper mapperFull; // dto
 	
 	@Autowired
-	IServiceActions<Client> service;//*IClientService service;
+	IClientService service;//*IClientService service;
 	
 	public ClientController() {
 		mapperLight = new ModelMapper();
