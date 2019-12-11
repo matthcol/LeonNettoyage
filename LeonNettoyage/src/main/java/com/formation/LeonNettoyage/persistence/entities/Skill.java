@@ -41,7 +41,7 @@ public class Skill {
 	private Long price;
 	
 	@OneToMany(fetch=FetchType.EAGER)
-	@JoinColumn(name = "id_skill_of_cleaner", referencedColumnName = "id")
+	@JoinColumn(name = "id_skill")
 	private Set<SkillOfCleaner> skillOfCleaner;
 
 	public Long getId() {

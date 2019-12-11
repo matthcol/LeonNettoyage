@@ -15,3 +15,14 @@ INSERT INTO client (id, name, first_name, email, phone, date_of_birth, password)
 INSERT INTO cleaner (id, pseudo, price, password) VALUES (1, 'CharlesManson', '2000', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
 INSERT INTO cleaner (id, pseudo, price, password) VALUES (2, 'TedBundy', '2500', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
 INSERT INTO cleaner (id, pseudo, price, password) VALUES (3, 'FreddyKrueger', '3000', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
+INSERT INTO cleaner (id, pseudo, price, password) VALUES (4, 'Terminator', '5000', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
+INSERT INTO skill_of_cleaner (id, id_skill, id_cleaner) VALUES (1, '1', 1);
+INSERT INTO skill_of_cleaner (id, id_skill, id_cleaner) VALUES (2, '2', 1);
+INSERT INTO skill_of_cleaner (id, id_skill, id_cleaner) VALUES (3, '3', 1);
+INSERT INTO skill_of_cleaner (id, id_skill, id_cleaner) VALUES (4, '1', 2);
+INSERT INTO skill_of_cleaner (id, id_skill, id_cleaner) VALUES (5, '2', 2);
+INSERT INTO skill_of_cleaner (id, id_skill, id_cleaner) VALUES (6, '3', 4);
+INSERT INTO skill_of_cleaner (id, id_skill, id_cleaner) VALUES (7, '2', 3);
+INSERT INTO skill (id, skill_name, price, id_skill_of_cleaner) VALUES (1, "Strangulation", "500", 1);
+INSERT INTO skill (id, skill_name, price, id_skill_of_cleaner) VALUES (2, "Arme blanche", "400", 3);
+INSERT INTO skill (id, skill_name, price, id_skill_of_cleaner) VALUES (3, "Arme à feu", "300", 2);
