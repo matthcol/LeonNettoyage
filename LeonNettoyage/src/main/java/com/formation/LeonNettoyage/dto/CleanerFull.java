@@ -10,6 +10,7 @@ public class CleanerFull {
 	@Column
 	private Long pseudo;
 	@Column
+	
 	private Long price;
 	public CleanerFull(Long id, Long pseudo, Long price) {
 		super();
@@ -23,7 +24,7 @@ public class CleanerFull {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Long getPseudo() {
+	public Long getPseudo() { // string
 		return pseudo;
 	}
 	public void setPseudo(Long pseudo) {
