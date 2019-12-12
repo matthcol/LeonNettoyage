@@ -5,12 +5,15 @@ import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.formation.LeonNettoyage.dto.CleanerFull;
 import com.formation.LeonNettoyage.dto.CleanerLight;
+import com.formation.LeonNettoyage.persistence.entities.Cleaner;
 import com.formation.LeonNettoyage.services.ICleanerService;
 
 @RestController
@@ -45,5 +48,12 @@ public class CleanerController {
 				.map(c -> mapper.map(c, CleanerFull.class))
 				.collect(Collectors.toList());
 }
+	@PostMapping
+	public CleanerFull save(@RequestBody CleanerFull cleanerFull) {
+		Cleaner c = mapper.map(cleanerFull, Cleaner.class);
+		 c = service.save(c);
+		return mapper.map(c,CleanerFull.class);
+	}
+	
 	
 }
