@@ -34,10 +34,10 @@ public class JwtUserDetailsService implements UserDetailsService {
 		/**
 		 * If I do find a Client in my DB with it, I return it:
 		 */
+		
 		if (u != null) {
 			return new User(u.getEmail(), u.getPassword(), new ArrayList<>());
 		} else {
-			
 			/**
 			 * If I didn't find a Client, I look for a Cleaner and return it if found:
 			 */
