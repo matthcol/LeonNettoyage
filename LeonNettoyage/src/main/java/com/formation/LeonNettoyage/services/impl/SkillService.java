@@ -7,11 +7,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.formation.LeonNettoyage.persistence.entities.Skill;
 import com.formation.LeonNettoyage.persistence.repositories.ISkillRepository;
+import com.formation.LeonNettoyage.services.ISkillService;
 import com.formation.LeonNettoyage.services.common.AbstractService;
 
 @Service
 @Transactional
-public class SkillService extends AbstractService<Skill>{
+public class SkillService extends AbstractService<Skill> implements ISkillService {
+	
 	@Autowired
 	private ISkillRepository repo;
 	

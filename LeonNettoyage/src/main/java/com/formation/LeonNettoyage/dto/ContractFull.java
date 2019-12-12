@@ -1,10 +1,7 @@
 package com.formation.LeonNettoyage.dto;
 
-import com.formation.LeonNettoyage.persistence.entities.Attempt;
-import com.formation.LeonNettoyage.persistence.entities.Cleaner;
-import com.formation.LeonNettoyage.persistence.entities.Skill;
-import com.formation.LeonNettoyage.persistence.entities.Target;
-import com.formation.LeonNettoyage.persistence.entities.TypeOfTarget;
+
+
 
 public class ContractFull {
 	
@@ -12,18 +9,18 @@ public class ContractFull {
 	
 	private Long price;
 	
-	private Target target;
+	private TargetFull target;
 	
-	private TypeOfTarget typeoftarget;
+	private TypeOfTargetFull typeoftarget;
 
-	private Skill skill;
+	private SkillFull skill;
 	
-	private Cleaner cleaner;
+	private CleanerFull cleaner;
 	
-	private Attempt attempt;
+	private AttemptFull attempt;
 	
 	
-	public ContractFull(Long id, Long price, Target target, TypeOfTarget typeoftarget, Skill skill, Cleaner cleaner, Attempt attempt) {
+	public ContractFull(Long id, Long price, TargetFull target, TypeOfTargetFull typeoftarget, SkillFull skill, CleanerFull cleaner, AttemptFull attempt) {
 		super();
 		this.id = id;
 		this.price = price;
@@ -37,19 +34,19 @@ public class ContractFull {
 	public ContractFull() {
 	}
 	
-	public Target getTarget() {
+	public TargetFull getTarget() {
 		return target;
 	}
 
-	public void setTarget(Target target) {
+	public void setTarget(TargetFull target) {
 		this.target = target;
 	}
 
-	public TypeOfTarget getTypeoftarget() {
+	public TypeOfTargetFull getTypeoftarget() {
 		return typeoftarget;
 	}
 
-	public void setTypeoftarget(TypeOfTarget typeoftarget) {
+	public void setTypeoftarget(TypeOfTargetFull typeoftarget) {
 		this.typeoftarget = typeoftarget;
 	}
 
@@ -69,27 +66,27 @@ public class ContractFull {
 		this.price = price;
 	}
 
-	public Skill getSkill() {
+	public SkillFull getSkill() {
 		return skill;
 	}
 
-	public void setSkill(Skill skill) {
+	public void setSkill(SkillFull skill) {
 		this.skill = skill;
 	}
 
-	public Cleaner getCleaner() {
+	public CleanerFull getCleaner() {
 		return cleaner;
 	}
 
-	public void setCleaner(Cleaner cleaner) {
+	public void setCleaner(CleanerFull cleaner) {
 		this.cleaner = cleaner;
 	}
 
-	public Attempt getAttempt() {
+	public AttemptFull getAttempt() {
 		return attempt;
 	}
 
-	public void setAttempt(Attempt attempt) {
+	public void setAttempt(AttemptFull attempt) {
 		this.attempt = attempt;
 	}
 

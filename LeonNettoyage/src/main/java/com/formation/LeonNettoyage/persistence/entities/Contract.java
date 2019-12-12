@@ -35,7 +35,7 @@ public class Contract {
 	private Client client;
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name = "id_service", referencedColumnName = "id")
-	private Skill service;
+	private Skill skill;
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name = "id_cleaner", referencedColumnName = "id")
 	private Cleaner cleaner;
@@ -66,11 +66,11 @@ public class Contract {
 	public void setClient(Client client) {
 		this.client = client;
 	}
-	public Skill getService() {
-		return service;
+	public Skill getSkill() {
+		return skill;
 	}
-	public void setService(Skill service) {
-		this.service = service;
+	public void setSkill(Skill skill) {
+		this.skill = skill;
 	}
 	public Cleaner getCleaner() {
 		return cleaner;
