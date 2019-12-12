@@ -8,6 +8,11 @@ public class NewUser {
 		this.password = password;
 	}
 	
+	public NewUser() {
+		
+	}
+	
+	
 	private String userType;
 	
 	private String username;
