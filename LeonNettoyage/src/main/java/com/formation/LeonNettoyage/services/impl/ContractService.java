@@ -32,16 +32,19 @@ public class ContractService<T> extends AbstractService<Contract> implements ICo
 	
 	@Override
 	public List<Contract> findAll() {
+		
 		return getRepo().findAll();
 	}
 
 	@Transactional(readOnly=true)
 	@Override
 	public Contract findOne(Long id) {
+		
 		Optional<Contract>opt = getRepo().findById(id);
 		if (opt.isEmpty()) {
 			throw new ContractNotFoundException("");
 		}
+		
 		return opt.get();
 	}
 
