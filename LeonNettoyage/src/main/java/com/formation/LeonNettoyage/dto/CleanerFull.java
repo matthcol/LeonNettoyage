@@ -28,8 +28,9 @@ public class CleanerFull {
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public String getPseudo() { //string
-	
+
 		return pseudo;
 	}
 	public void setPseudo(String pseudo) {
