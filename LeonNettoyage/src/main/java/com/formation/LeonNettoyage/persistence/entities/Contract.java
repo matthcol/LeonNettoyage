@@ -1,6 +1,8 @@
 package com.formation.LeonNettoyage.persistence.entities;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,6 +18,10 @@ import javax.persistence.Table;
 @Table(name="contract")
 @Entity
 public class Contract {
+	
+	public Contract() {
+		attempts = new HashSet<Attempt>();
+	}
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //Colonne générée
@@ -34,8 +40,8 @@ public class Contract {
 	@JoinColumn(name = "id_cleaner", referencedColumnName = "id")
 	private Cleaner cleaner;
 	@OneToMany(fetch=FetchType.EAGER)
-	@JoinColumn(name = "id_attempt", referencedColumnName = "id")
-	private List<Attempt> attempts;
+	@JoinColumn(name = "id_contract", referencedColumnName = "id")
+	private Set<Attempt> attempts;
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name = "id_target", referencedColumnName = "id")
 	private Target target;
@@ -72,10 +78,10 @@ public class Contract {
 	public void setCleaner(Cleaner cleaner) {
 		this.cleaner = cleaner;
 	}
-	public List<Attempt> getAttempts() {
+	public Set<Attempt> getAttempts() {
 		return attempts;
 	}
-	public void setAttempts(List<Attempt> attempts) {
+	public void setAttempts(Set<Attempt> attempts) {
 		this.attempts = attempts;
 	}
 	public Target getTarget() {
