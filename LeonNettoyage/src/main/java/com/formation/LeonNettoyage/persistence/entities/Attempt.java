@@ -1,5 +1,8 @@
 package com.formation.LeonNettoyage.persistence.entities;
 
+import java.util.Date;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -16,6 +19,9 @@ public class Attempt {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //Colonne générée
 	private Long id;
+	
+	@Column
+	private Date date;
 
 	
 	@ManyToOne(fetch=FetchType.LAZY)
@@ -39,4 +45,12 @@ public class Attempt {
 		this.status = status;
 	}
 
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	
 }
