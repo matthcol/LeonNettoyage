@@ -1,4 +1,5 @@
 DELETE FROM attempt; 
+DELETE FROM contract;
 DELETE FROM status;
 DELETE FROM target;
 DELETE FROM type_of_target;
@@ -6,7 +7,6 @@ DELETE FROM skill_of_cleaner;
 DELETE FROM skill;
 DELETE FROM cleaner;
 DELETE FROM client;
-DELETE FROM contract;
 INSERT INTO client (id, name, first_name, email, phone, date_of_birth, password) VALUES (1, 'Richier', 'Benjamin', 'viensjoueraudocteur@gmail.com', '0632658596', '1948-06-19', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
 INSERT INTO client (id, name, first_name, email, phone, date_of_birth, password) VALUES (2, 'Rolles', 'Clément', 'blablacarpourlinter@gmail.com', '0656854123', '1985-03-10', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
 INSERT INTO client (id, name, first_name, email, phone, date_of_birth, password) VALUES (3, 'Marin', 'Lucas', 'bogossdu31@gmail.com', '0663236541', '1987-08-21', '$2y$12$YcZzbtNMaNzIHHc3cmN.AenlLml3X9VxlD7ZyRtJBmtTtUQLD28o.');
