@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.formation.LeonNettoyage.dto.CleanerFull;
 import com.formation.LeonNettoyage.dto.CleanerLight;
+import com.formation.LeonNettoyage.dto.CleanerPassword;
 import com.formation.LeonNettoyage.persistence.entities.Cleaner;
 import com.formation.LeonNettoyage.services.ICleanerService;
 
@@ -25,10 +26,6 @@ public class CleanerController {
 	
 	@Autowired
 	private ICleanerService service;
-	
-	public CleanerController() {
-		mapper = new ModelMapper();
-	}
 
 	
 	@RequestMapping(path = "/listLight", method = RequestMethod.GET) 
@@ -56,4 +53,9 @@ public class CleanerController {
 		return mapper.map(c,CleanerFull.class);
 	}
 	
+	@PostMapping (value = "/cleanerPassword")
+	public Cleaner changePassword(@RequestBody CleanerPassword cleanerPassword) {
+		return service.changePassword(cleanerPassword);
+	}
+
 }

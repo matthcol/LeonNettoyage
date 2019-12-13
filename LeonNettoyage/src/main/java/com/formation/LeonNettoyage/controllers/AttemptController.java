@@ -12,17 +12,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.formation.LeonNettoyage.dto.AttemptFull;
-import com.formation.LeonNettoyage.dto.CleanerFull;
+
+
 import com.formation.LeonNettoyage.dto.NewAttempt;
+
 import com.formation.LeonNettoyage.persistence.entities.Attempt;
-import com.formation.LeonNettoyage.persistence.entities.Cleaner;
-import com.formation.LeonNettoyage.persistence.entities.Client;
+
+
 import com.formation.LeonNettoyage.persistence.entities.Contract;
 import com.formation.LeonNettoyage.persistence.entities.Status;
+
 import com.formation.LeonNettoyage.services.IAttemptService;
 import com.formation.LeonNettoyage.services.IContractService;
 import com.formation.LeonNettoyage.services.IStatusService;
-import com.formation.LeonNettoyage.services.impl.ContractService;
 
 @RestController
 @RequestMapping(path = "/attempt")

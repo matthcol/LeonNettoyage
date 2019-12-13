@@ -1,7 +1,5 @@
 package com.formation.LeonNettoyage.controllers;
 
-import java.sql.SQLIntegrityConstraintViolationException;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -67,13 +65,10 @@ public class PublicController {
 		}		
 	}
 	
-	
 	@PostMapping(path = "/register") // post signifie écrire dans la base de donnée
 	@ResponseStatus(code = HttpStatus.OK)
 	public void save(@RequestBody NewUser u) {
-		
-	
-		
+			
 			/**
 			 * I test if the userType is of type client
 			 */
@@ -101,13 +96,6 @@ public class PublicController {
 				c.setPseudo(u.getEmail());
 				c.setPassword(encoder.encode(u.getPassword()));
 				serviceCleaner.save(c);
-			}
-		
-
-		
-		
-	}
-	
-	
-	
+			}	
+	}	
 }
