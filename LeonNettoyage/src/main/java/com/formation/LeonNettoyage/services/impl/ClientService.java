@@ -47,7 +47,6 @@ public class ClientService extends AbstractService<Client> implements IClientSer
 	public Client changePassword(ClientPassword clientPassword) {
 		Client c = repo.getOne(clientPassword.getId());	
 		c.setPassword(clientPassword.getPassword());
-		/*return repo.changePassword(clientPassword);*/
 		return repo.save(c);
 	}
 }

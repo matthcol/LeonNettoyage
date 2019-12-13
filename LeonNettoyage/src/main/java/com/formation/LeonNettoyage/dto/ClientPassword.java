@@ -3,7 +3,6 @@ package com.formation.LeonNettoyage.dto;
 public class ClientPassword {
 	
 	private Long id;
-	
 	private String password;
 
 	public ClientPassword(Long id, String password) {

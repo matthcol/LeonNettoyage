@@ -71,7 +71,7 @@ public class ClientController {
 		return service.save(client);
 	}
 	
-	@PostMapping (value = "/password")
+	@PostMapping (value = "/clientPassword")
 	public Client changePassword(@RequestBody ClientPassword clientPassword) {
 		return service.changePassword(clientPassword);
 	}
