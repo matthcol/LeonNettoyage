@@ -17,7 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.formation.LeonNettoyage.dto.ClientFull;
 import com.formation.LeonNettoyage.dto.ClientLight;
 import com.formation.LeonNettoyage.dto.ClientPassword;
+import com.formation.LeonNettoyage.exception.NotAuthorizedException;
 import com.formation.LeonNettoyage.persistence.entities.Client;
+import com.formation.LeonNettoyage.services.IAuthChecker;
 import com.formation.LeonNettoyage.services.IClientService;
 
 @RestController
@@ -25,22 +27,23 @@ import com.formation.LeonNettoyage.services.IClientService;
 public class ClientController {
 	
 	@Autowired
-	private ModelMapper mapperLight; // dto
-	@Autowired
-	private ModelMapper mapperFull; // dto
-	
+	private ModelMapper mapper; // dto
+
 	@Autowired
 	IClientService service;//*IClientService service;
 	
-	
+	@Autowired
+	IAuthChecker authChecker;
 
 	
 	@RequestMapping(path = "/listLight", method = RequestMethod.GET) 
 	public List<ClientLight> findAllLight() {
 		
+		
+		
 		return service.findAll()
 				.stream()
-				.map(c -> mapperLight.map(c, ClientLight.class))
+				.map(c -> mapper.map(c, ClientLight.class))
 				.collect(Collectors.toList());
 	}
 	
@@ -49,13 +52,23 @@ public class ClientController {
 		
 		return service.findAll()
 				.stream()
-				.map(c -> mapperFull.map(c, ClientFull.class))
+				.map(c -> mapper.map(c, ClientFull.class))
 				.collect(Collectors.toList());
 	}
 	
 	@GetMapping(path="/{identifier}") // associe à la méthode get, l'url à la fonction // {variable
-	public Client findOne (@PathVariable (name = "identifier") Long id){
-		return service.findOne(id);		
+	public ClientFull findOne (@PathVariable (name = "identifier") Long id){
+		
+		Client me = authChecker.getCurrentUser();
+		
+		System.out.println("called by " + me.getName());
+		
+		if (me.getId().equals(id))
+			return mapper.map(service.findOne(id), ClientFull.class) ;	
+
+		
+		throw new NotAuthorizedException("Unauthorized");
+			
 	}
 	
 	@DeleteMapping(path="/{identifier}") 
