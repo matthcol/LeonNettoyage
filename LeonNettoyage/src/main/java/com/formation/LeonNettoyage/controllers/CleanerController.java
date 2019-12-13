@@ -55,5 +55,5 @@ public class CleanerController {
 		 c = service.save(c);
 		return mapper.map(c,CleanerFull.class);
 	}
-	
+	*//.
 }
