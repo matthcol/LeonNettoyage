@@ -30,9 +30,6 @@ public class SkillOfCleanerController {
 	@Autowired
 	private CleanerService serviceCleaner;
 	
-	public SkillOfCleanerController() {
-		mapper = new ModelMapper();
-	}
 	
 	@GetMapping(path="/cleaner/{identifier}")
 	public Cleaner findByIdCleaner(@PathVariable (name = "identifier") Long id){

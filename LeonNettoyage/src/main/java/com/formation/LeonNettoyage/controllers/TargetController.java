@@ -30,11 +30,7 @@ public class TargetController {
 		
 		@Autowired
 		IServiceActions<Target> service;//*IClientService service;
-		
-		public TargetController() {
-			mapperLight = new ModelMapper();
-			mapperFull = new ModelMapper();
-		}
+
 		
 		@RequestMapping(path = "/listLight", method = RequestMethod.GET) 
 		public List<TargetLight> findAllLight() {
