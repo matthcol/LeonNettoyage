@@ -4,12 +4,7 @@ import java.util.Date;
 
 import com.formation.LeonNettoyage.persistence.entities.Status;
 
-public class AttemptFull {
-
-	
-	
-	public AttemptFull() {
-	}
+public class NewAttempt {
 	
 	private Long id;
 
@@ -18,7 +13,7 @@ public class AttemptFull {
 	private Long idContract;
 	
 
-	private Status status;
+	private Long idStatus;
 
 
 	public Long getId() {
@@ -28,6 +23,16 @@ public class AttemptFull {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+
+	public Date getDate() {
+		return date;
+	}
+
+
+	public void setDate(Date date) {
+		this.date = date;
 	}
 
 
@@ -41,22 +46,16 @@ public class AttemptFull {
 	}
 
 
-	public Status getStatus() {
-		return status;
+	public Long getIdStatus() {
+		return idStatus;
 	}
 
 
-	public void setStatus(Status status) {
-		this.status = status;
+	public void setIdStatus(Long idStatus) {
+		this.idStatus = idStatus;
 	}
 
-	public Date getDate() {
-		return date;
-	}
 
-	public void setDate(Date date) {
-		this.date = date;
-	}
-	
-	
+
+
 }
