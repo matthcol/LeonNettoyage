@@ -50,10 +50,5 @@ public class AttemptController {
 		 c = serviceAttempt.save(c);
 		return mapper.map(c,AttemptFull.class);
 	}
-		
-	
-	
-	
-	
 	
 }

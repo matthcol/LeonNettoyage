@@ -25,7 +25,7 @@ public class CleanerController {
 	
 	@Autowired
 	private ICleanerService service;
-
+	
 	public CleanerController() {
 		mapper = new ModelMapper();
 	}
@@ -47,13 +47,13 @@ public class CleanerController {
 				.stream()
 				.map(c -> mapper.map(c, CleanerFull.class))
 				.collect(Collectors.toList());
-}
+	}
+
 	@PostMapping
 	public CleanerFull save(@RequestBody CleanerFull cleanerFull) {
 		Cleaner c = mapper.map(cleanerFull, Cleaner.class);
 		 c = service.save(c);
 		return mapper.map(c,CleanerFull.class);
 	}
-	
 	
 }

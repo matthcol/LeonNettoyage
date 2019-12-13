@@ -20,4 +20,5 @@ public class SkillOfCleanerService extends AbstractService<SkillOfCleaner>{
 		return repo;
 	}
 
+
 }

@@ -2,20 +2,13 @@ package com.formation.LeonNettoyage.dto;
 
 import java.util.Date;
 
-import javax.persistence.Column;
-
 public class ClientFull {
 
 	private Long id;
-	@Column
 	private String name;
-	@Column
 	private String firstName;
-	@Column
 	private String email;
-	@Column
 	private String phone;
-	@Column
 	private Date dateOfBirth;
 	
 	public ClientFull(Long id, String name, String firstName, String email, String phone, Date dateOfBirth) {

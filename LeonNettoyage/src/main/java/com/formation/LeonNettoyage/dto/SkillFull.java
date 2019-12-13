@@ -1,16 +1,11 @@
 package com.formation.LeonNettoyage.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-
 public class SkillFull {
 	
-	@Id
 	private Long id;
-	@Column
 	private String skillName;
-	@Column
 	private Long price;
+	
 	public SkillFull(Long id, String skillName, Long price) {
 		super();
 		this.id = id;
@@ -40,7 +35,5 @@ public class SkillFull {
 	public void setPrice(Long price) {
 		this.price = price;
 	}
-	
-	
 
 }
