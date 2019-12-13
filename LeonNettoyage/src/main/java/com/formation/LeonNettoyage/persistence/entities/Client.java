@@ -19,7 +19,7 @@ public class Client {
 	private String name;
 	@Column
 	private String firstName;
-	@Column
+	@Column(unique = true)
 	private String email;
 	@Column
 	private String phone;

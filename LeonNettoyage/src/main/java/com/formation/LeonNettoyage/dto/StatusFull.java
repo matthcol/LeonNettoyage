@@ -10,6 +10,9 @@ public class StatusFull {
 		this.label = label;
 	}
 	
+	public StatusFull() {
+	}
+	
 	
 	private Long id;
 

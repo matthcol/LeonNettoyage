@@ -19,7 +19,7 @@ import exceptions.ContractNotFoundException;
 
 @Service
 @Transactional
-public class ContractService<T> extends AbstractService<Contract> implements IContractService{
+public class ContractService extends AbstractService<Contract> implements IContractService{
 	
 	@Autowired
 	private IContractRepository tutu;
@@ -32,16 +32,19 @@ public class ContractService<T> extends AbstractService<Contract> implements ICo
 	
 	@Override
 	public List<Contract> findAll() {
+		
 		return getRepo().findAll();
 	}
 
 	@Transactional(readOnly=true)
 	@Override
 	public Contract findOne(Long id) {
+		
 		Optional<Contract>opt = getRepo().findById(id);
 		if (opt.isEmpty()) {
 			throw new ContractNotFoundException("");
 		}
+		
 		return opt.get();
 	}
 
@@ -60,5 +63,7 @@ public class ContractService<T> extends AbstractService<Contract> implements ICo
 	public Contract save(@RequestBody Contract contract) {
 		return getRepo().save(contract);
 	}
+	
+	
 	
 }

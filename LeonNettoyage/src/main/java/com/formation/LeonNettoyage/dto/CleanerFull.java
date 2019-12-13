@@ -3,25 +3,32 @@ package com.formation.LeonNettoyage.dto;
 public class CleanerFull {
 	
 	private Long id;
-	private Long pseudo;
+	private String pseudo;
 	private Long price;
-	
-	public CleanerFull(Long id, Long pseudo, Long price) {
+
+	public CleanerFull(Long id, String pseudo, Long price) {
 		super();
 		this.id = id;
 		this.pseudo = pseudo;
 		this.price = price;
 	}
+	
+	public CleanerFull() {
+	}
+	
+	
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Long getPseudo() {
+
+	public String getPseudo() { //string
+
 		return pseudo;
 	}
-	public void setPseudo(Long pseudo) {
+	public void setPseudo(String pseudo) {
 		this.pseudo = pseudo;
 	}
 	public Long getPrice() {

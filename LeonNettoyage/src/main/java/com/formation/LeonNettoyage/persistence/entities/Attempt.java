@@ -1,5 +1,7 @@
 package com.formation.LeonNettoyage.persistence.entities;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -17,9 +19,10 @@ public class Attempt {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //Colonne générée
 	private Long id;
-
+	
 	@Column
-	private Long idContract;
+	private Date date;
+
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn
@@ -33,13 +36,6 @@ public class Attempt {
 		this.id = id;
 	}
 
-	public Long getIdContract() {
-		return idContract;
-	}
-
-	public void setIdContract(Long idContract) {
-		this.idContract = idContract;
-	}
 
 	public Status getStatus() {
 		return status;
@@ -49,4 +45,12 @@ public class Attempt {
 		this.status = status;
 	}
 
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	
 }
