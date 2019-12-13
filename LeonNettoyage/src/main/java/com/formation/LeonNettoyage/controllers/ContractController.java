@@ -90,7 +90,7 @@ import com.formation.LeonNettoyage.services.ITypeOfTargetService;
 
 	
 	
-	@RequestMapping(path = "/contract/light", method = RequestMethod.GET) 
+	@RequestMapping(path = "/light", method = RequestMethod.GET) 
 	public List<ContractLight> findAllLight() {
 		
 		return servicecontrat.findAll()
@@ -99,7 +99,7 @@ import com.formation.LeonNettoyage.services.ITypeOfTargetService;
 				.collect(Collectors.toList());
 	}
 	
-	@RequestMapping(path = "/contract/full", method = RequestMethod.GET) 
+	@RequestMapping(path = "/full", method = RequestMethod.GET) 
 	public List<ContractFull> findAllFull() {
 		
 		return servicecontrat.findAll()
@@ -109,7 +109,7 @@ import com.formation.LeonNettoyage.services.ITypeOfTargetService;
 	}
 	
 
-	@RequestMapping(path = "/contract/log", method = RequestMethod.GET) 
+	@RequestMapping(path = "/log", method = RequestMethod.GET) 
 	public List<ContractLog> findAllLog() {
 		
 		return servicecontrat.findAll()
