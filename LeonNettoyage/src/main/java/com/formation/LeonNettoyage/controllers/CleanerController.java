@@ -22,7 +22,7 @@ public class CleanerController {
 	
 	@Autowired
 	private ICleanerService service;
-
+	
 	public CleanerController() {
 		mapper = new ModelMapper();
 	}
@@ -44,6 +44,7 @@ public class CleanerController {
 				.stream()
 				.map(c -> mapper.map(c, CleanerFull.class))
 				.collect(Collectors.toList());
-}
+	}
+	
 	
 }

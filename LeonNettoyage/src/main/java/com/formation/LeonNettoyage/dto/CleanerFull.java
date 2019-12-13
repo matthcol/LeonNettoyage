@@ -1,16 +1,11 @@
 package com.formation.LeonNettoyage.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-
 public class CleanerFull {
 	
-	@Id
 	private Long id;
-	@Column
 	private Long pseudo;
-	@Column
 	private Long price;
+	
 	public CleanerFull(Long id, Long pseudo, Long price) {
 		super();
 		this.id = id;

@@ -10,6 +10,7 @@ import com.formation.LeonNettoyage.persistence.entities.Client;
 import com.formation.LeonNettoyage.persistence.repositories.ICleanerRepository;
 import com.formation.LeonNettoyage.services.ICleanerService;
 import com.formation.LeonNettoyage.services.common.AbstractService;
+import com.sun.xml.bind.annotation.OverrideAnnotationOf;
 
 @Service
 @Transactional
@@ -24,5 +25,9 @@ public class CleanerService extends AbstractService<Cleaner> implements ICleaner
 	@Override
 	public Cleaner findByName(String username) {
 		return repo.findByName(username);
+	}
+	
+	public Cleaner findByCleanerId(Long id) {
+		return repo.getOne(id);
 	}
 }
