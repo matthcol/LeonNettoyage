@@ -1,14 +1,10 @@
 package com.formation.LeonNettoyage.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
 
 public class CleanerLight {
 	
-	@Id
 	private Long id;
 	
-	@Column
 	private String pseudo;
 	
 	public CleanerLight(Long id, String pseudo) {
