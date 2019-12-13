@@ -1,12 +1,8 @@
 package com.formation.LeonNettoyage.dto;
 
-import javax.persistence.Column;
-
 public class ClientLight {
 
-	@Column
 	private Long id;
-	@Column
 	private String name;
 	
 	public ClientLight(Long id, String name) {

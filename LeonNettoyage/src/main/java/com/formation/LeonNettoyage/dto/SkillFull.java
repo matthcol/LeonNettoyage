@@ -3,10 +3,9 @@ package com.formation.LeonNettoyage.dto;
 public class SkillFull {
 	
 	private Long id;
-
 	private String skillName;
-
 	private Long price;
+	
 	public SkillFull(Long id, String skillName, Long price) {
 		super();
 		this.id = id;
@@ -36,7 +35,5 @@ public class SkillFull {
 	public void setPrice(Long price) {
 		this.price = price;
 	}
-	
-	
 
 }

@@ -1,7 +1,9 @@
 package com.formation.LeonNettoyage.dto;
 
 public class CleanerLight {
+
 	private Long id;
+
 	private String pseudo;
 	
 	public CleanerLight(Long id, String pseudo) {
