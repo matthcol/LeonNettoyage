@@ -2,9 +2,9 @@ package com.formation.LeonNettoyage.dto;
 
 public class NewUser {
 
-	public NewUser(String userType, String username, String password) {
+	public NewUser(String userType, String email, String password) {
 		this.userType = userType;
-		this.username = username;
+		this.email = email;
 		this.password = password;
 	}
 	
@@ -15,7 +15,7 @@ public class NewUser {
 	
 	private String userType;
 	
-	private String username;
+	private String email;
 	
 	private String password;
 
@@ -27,12 +27,12 @@ public class NewUser {
 		this.userType = userType;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getPassword() {

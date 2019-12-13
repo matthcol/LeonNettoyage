@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.formation.LeonNettoyage.exception.AlreadyExistException;
 import com.formation.LeonNettoyage.persistence.entities.Client;
 import com.formation.LeonNettoyage.persistence.repositories.IClientRepository;
 import com.formation.LeonNettoyage.services.IClientService;
@@ -28,4 +29,19 @@ public class ClientService extends AbstractService<Client> implements IClientSer
 		return repo.findByMail(username);
 	}
 
+	
+	@Override
+	public Client save(Client t) {
+		
+		try {
+			t = super.save(t);
+		} catch (Exception e) {
+		
+			throw new AlreadyExistException("Impossible d'utiliser ces credentials");
+		}
+		
+		return t;
+		
+		
+	}
 }

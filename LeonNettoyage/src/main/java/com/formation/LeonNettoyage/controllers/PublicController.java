@@ -1,5 +1,7 @@
 package com.formation.LeonNettoyage.controllers;
 
+import java.sql.SQLIntegrityConstraintViolationException;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -10,15 +12,14 @@ import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-
 import com.formation.LeonNettoyage.config.JwtTokenUtil;
-import com.formation.LeonNettoyage.dto.ClientFull;
 import com.formation.LeonNettoyage.dto.NewUser;
 import com.formation.LeonNettoyage.dto.jwt.JwtRequest;
 import com.formation.LeonNettoyage.dto.jwt.JwtResponse;
@@ -51,7 +52,8 @@ public class PublicController {
 	@Autowired
 	private UserDetailsService userDetailsService;
 	
-	
+	@Autowired
+	private BCryptPasswordEncoder encoder;
 	
 	@PostMapping(value = "/authenticate")
 	public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
@@ -66,19 +68,44 @@ public class PublicController {
 	}
 	
 	
-	@PostMapping // post signifie écrire dans la base de donnée
+	@PostMapping(path = "/register") // post signifie écrire dans la base de donnée
 	@ResponseStatus(code = HttpStatus.OK)
 	public void save(@RequestBody NewUser u) {
 		
-		if (u.getUserType().equals("client")) {
-			
-			serviceClient.save(mapper.map(u, Client.class)); 
-		}
-		if ("cleaner".equals(u.getUserType())) {
-			
-			serviceCleaner.save(mapper.map(u, Cleaner.class));
-		}
+	
+		
+			/**
+			 * I test if the userType is of type client
+			 */
+			if (u.getUserType().equals("client")) {
+				
+				/**
+				 * I create a new client
+				 */
+				Client c = new Client();
+				
+				/**
+				 * I set its information email and password
+				 */
+				c.setEmail(u.getEmail());
+				c.setPassword(encoder.encode(u.getPassword()));
+				
+				/**
+				 * I save my new client in the database
+				 */
+				serviceClient.save(c); 
+				
+			}
+			if ("cleaner".equals(u.getUserType())) {
+				Cleaner c = new Cleaner();
+				c.setPseudo(u.getEmail());
+				c.setPassword(encoder.encode(u.getPassword()));
+				serviceCleaner.save(c);
+			}
+		
 
+		
+		
 	}
 	
 	
