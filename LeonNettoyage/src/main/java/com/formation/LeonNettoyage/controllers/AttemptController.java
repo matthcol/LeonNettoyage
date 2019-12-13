@@ -12,13 +12,27 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.formation.LeonNettoyage.dto.AttemptFull;
+
+
+import com.formation.LeonNettoyage.dto.NewAttempt;
+
 import com.formation.LeonNettoyage.persistence.entities.Attempt;
+
+
+import com.formation.LeonNettoyage.persistence.entities.Contract;
+import com.formation.LeonNettoyage.persistence.entities.Status;
+
 import com.formation.LeonNettoyage.services.IAttemptService;
+import com.formation.LeonNettoyage.services.IContractService;
 import com.formation.LeonNettoyage.services.IStatusService;
 
 @RestController
+@RequestMapping(path = "/attempt")
 public class AttemptController {
-
+	
+	@Autowired
+	IContractService serviceContract;
+	
 	@Autowired
 	IAttemptService serviceAttempt;
 	
@@ -32,7 +46,7 @@ public class AttemptController {
 		mapper = new ModelMapper();
 	}
 	
-	@RequestMapping(path = "/attemptlist", method = RequestMethod.GET) 
+	@RequestMapping(path = "/list", method = RequestMethod.GET) 
 	public List<AttemptFull>findAll(){
 		
 		return serviceAttempt.findAll()
@@ -42,11 +56,20 @@ public class AttemptController {
 		
 	}
 	
-	@PostMapping
-	public AttemptFull save(@RequestBody AttemptFull attemptFull) {
-		Attempt c = mapper.map(attemptFull, Attempt.class);
-		 c = serviceAttempt.save(c);
-		return mapper.map(c,AttemptFull.class);
+	@PostMapping(path = "/newattempt")
+	public boolean create(@RequestBody NewAttempt newAttempt) {
+		Contract c = serviceContract.findOne(newAttempt.getIdContract());
+		Status s = serviceStatus.findOne(newAttempt.getIdStatus());
+		Attempt a = new Attempt();
+		
+		a.setStatus(s);
+		
+		
+		c.getAttempts().add(a);
+		serviceContract.save(c);
+		
+		return true;
+		
 	}
 	
 }
