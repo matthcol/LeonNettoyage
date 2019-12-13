@@ -33,10 +33,7 @@ public class ClientController {
 	IClientService service;//*IClientService service;
 	
 	
-	public ClientController() {
-		mapperLight = new ModelMapper();
-		mapperFull = new ModelMapper();
-	}
+
 	
 	@RequestMapping(path = "/listLight", method = RequestMethod.GET) 
 	public List<ClientLight> findAllLight() {

@@ -26,10 +26,6 @@ public class CleanerController {
 	
 	@Autowired
 	private ICleanerService service;
-	
-	public CleanerController() {
-		mapper = new ModelMapper();
-	}
 
 	
 	@RequestMapping(path = "/listLight", method = RequestMethod.GET) 
