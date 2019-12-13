@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.formation.LeonNettoyage.dto.ClientFull;
 import com.formation.LeonNettoyage.dto.ClientLight;
+import com.formation.LeonNettoyage.dto.ClientPassword;
 import com.formation.LeonNettoyage.persistence.entities.Client;
 import com.formation.LeonNettoyage.services.IClientService;
 
@@ -68,5 +69,10 @@ public class ClientController {
 	@PostMapping
 	public Client save (@RequestBody Client client) {
 		return service.save(client);
+	}
+	
+	@PostMapping (value = "/password")
+	public Client changePassword(@RequestBody ClientPassword clientPassword) {
+		return service.changePassword(clientPassword);
 	}
 }

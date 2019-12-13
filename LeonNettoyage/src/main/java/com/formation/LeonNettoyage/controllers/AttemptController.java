@@ -12,9 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.formation.LeonNettoyage.dto.AttemptFull;
-import com.formation.LeonNettoyage.dto.CleanerFull;
 import com.formation.LeonNettoyage.persistence.entities.Attempt;
-import com.formation.LeonNettoyage.persistence.entities.Cleaner;
 import com.formation.LeonNettoyage.services.IAttemptService;
 import com.formation.LeonNettoyage.services.IStatusService;
 

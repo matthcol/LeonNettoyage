@@ -5,7 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.formation.LeonNettoyage.persistence.entities.Contract;
 import com.formation.LeonNettoyage.persistence.entities.TypeOfTarget;
 import com.formation.LeonNettoyage.persistence.repositories.ITypeOfTargetRepository;
 import com.formation.LeonNettoyage.services.ITypeOfTargetService;

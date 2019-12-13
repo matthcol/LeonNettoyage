@@ -9,8 +9,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.formation.LeonNettoyage.persistence.repositories.ISkillOfCleanerRepository;
-
 @Table(name="skill_of_cleaner")
 @Entity
 public class SkillOfCleaner{
