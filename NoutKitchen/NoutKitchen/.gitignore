@@ -1,7 +1,0 @@
-/.settings/
-target/
-*.class
-*.jar
-.project
-.classpath
-.application.properties
