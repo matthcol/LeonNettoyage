@@ -1,5 +1,7 @@
 package com.formation.LeonNettoyage.persistence.entities;
 
+import java.util.Objects;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,7 +16,8 @@ public class Cleaner {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //Colonne générée
 	private Long id;
-	@Column
+	
+	@Column(unique = true)
 	private String pseudo;
 	@Column
 	private Long price;
@@ -48,4 +51,14 @@ public class Cleaner {
 		this.price = price;
 	}
 	
+	
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder(pseudo);
+		return builder.append("[")
+				.append(Objects.toString(price, "no price"))
+				.append("]#")
+				.append(Objects.toString(id,"?"))
+				.toString();
+	}
 }

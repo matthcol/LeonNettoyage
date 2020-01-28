@@ -26,7 +26,7 @@ public class CleanerService extends AbstractService<Cleaner> implements ICleaner
 	}
 	@Override
 	public Cleaner findByName(String username) {
-		return repo.findByName(username);
+		return repo.findByPseudo(username);
 	}
 	
 	public Cleaner findByCleanerId(Long id) {

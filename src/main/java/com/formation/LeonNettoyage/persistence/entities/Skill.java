@@ -29,13 +29,11 @@ public class Skill {
 	public Skill() {
 		skillOfCleaner = new HashSet<SkillOfCleaner>();
 	}
-	
-	
-	
+		
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //Colonne générée
 	private Long id;
-	@Column
+	@Column(name = "skill_name")
 	private String skillName;
 	@Column
 	private Long price;

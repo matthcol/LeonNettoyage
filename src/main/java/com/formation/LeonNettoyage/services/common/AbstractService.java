@@ -25,8 +25,8 @@ public abstract class AbstractService<T> implements IServiceActions<T> {
 	@Transactional(readOnly=true)
 	@Override
 	public T findOne(Long id) {
-		Optional<T>opt = getRepo().findById(id);
-		if (opt.isEmpty()) {
+		Optional<T> opt = getRepo().findById(id);
+		if (!opt.isPresent()) {
 			throw new ClientNotFoundException("Pas de résultat");
 		}
 		return opt.get();

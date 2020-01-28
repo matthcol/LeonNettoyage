@@ -40,8 +40,8 @@ public class ContractService extends AbstractService<Contract> implements IContr
 	@Override
 	public Contract findOne(Long id) {
 		
-		Optional<Contract>opt = getRepo().findById(id);
-		if (opt.isEmpty()) {
+		Optional<Contract> opt = getRepo().findById(id);
+		if (!opt.isPresent()) {
 			throw new ContractNotFoundException("");
 		}
 		
